@@ -1,12 +1,39 @@
-﻿<Window x:Class="WpfAlyTalo.MainWindow"
+﻿<Window x:Class="Talo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfAlyTalo"
+        xmlns:local="clr-namespace:Talo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="386.8" Width="700">
+    <Grid Margin="0,0,-6.6,-0.4">
+        <GroupBox Header="Keittiö" HorizontalAlignment="Left" Height="282" Margin="31,14,0,0" VerticalAlignment="Top" Width="138" FontSize="16" FontWeight="Bold">
+            <Grid HorizontalAlignment="Left" Height="246" Margin="5,10,-3.2,-3.2" VerticalAlignment="Top" Width="127">
+                <Button x:Name="kitchenLightsOnButton" Content="Lights On" VerticalAlignment="Top" Height="32" Click="kitchenLightsOnButton_Click" FontWeight="Bold" Background="#FFE57D14" BorderBrush="#FFC06D6D" Foreground="Black"/>
+                <Slider x:Name="kitchenLightsSlider" HorizontalAlignment="Left" Height="22" Margin="10,59,0,0" VerticalAlignment="Top" Width="97" ValueChanged="kitchenLightsSlider_ValueChanged" IsEnabled="False" Maximum="100"/>
+                <TextBlock x:Name="kitchenTextBlock" HorizontalAlignment="Left" Height="47" Margin="10,101,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="97" FontSize="24" FontWeight="Bold" TextDecorations="{x:Null}"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Olohuone" HorizontalAlignment="Left" Height="282" Margin="169,14,0,0" VerticalAlignment="Top" Width="162" FontSize="16" FontWeight="Bold">
+            <Grid HorizontalAlignment="Left" Height="246" Margin="8,10,-2.4,-3.2" VerticalAlignment="Top" Width="144">
+                <Button x:Name="btnLivingroomLightsOn" Content="Lights On" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Height="32" Click="btnTurnLightsOn_Click" FontWeight="Bold" Background="#FFB34242"/>
+                <Slider x:Name="livingroomLightsSlider" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="124" IsEnabled="False" ValueChanged="livingroomLightsSlider_ValueChanged" Maximum="100" BorderBrush="#FF8B6565"/>
+                <TextBlock x:Name="livingRmTextBlock" HorizontalAlignment="Left" Margin="10,101,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="88" Height="30" FontSize="24" FontWeight="Bold"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Sauna" HorizontalAlignment="Left" Height="278" Margin="349,14,0,0" VerticalAlignment="Top" Width="147" FontWeight="Bold" FontSize="16">
+            <Grid HorizontalAlignment="Left" Height="247" Margin="0,9,0,-3.2" VerticalAlignment="Top" Width="131">
+                <TextBlock x:Name="saunaTextBlock" HorizontalAlignment="Left" Height="33" Margin="17,105,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="89" FontWeight="Bold" FontSize="24"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="saunaOnButton" Content="Turn Sauna On" HorizontalAlignment="Left" Height="32" Margin="360,47,0,0" VerticalAlignment="Top" Width="127" Click="saunaOnButton_Click" Background="#FFA98181" FontSize="16" FontWeight="Bold"/>
+        <Grid HorizontalAlignment="Left" Height="267" Margin="521,29,0,0" VerticalAlignment="Top" Width="153">
+            <Button x:Name="ThermostatBtn" Content="Thermostat" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="127" Height="33" Click="ThermostatBtn_Click" FontSize="16" FontWeight="Bold" Background="#FF662424" BorderBrush="#FF796A6A"/>
+            <TextBox x:Name="TxtTemperature" HorizontalAlignment="Left" Height="34" Margin="10,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" FontSize="16" BorderBrush="#FF798DC8" Background="#FFDC7C7C" FontWeight="Bold"/>
+            <TextBox x:Name="TxtNewTemp" HorizontalAlignment="Left" Height="35" Margin="10,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" FontSize="14" FontWeight="Bold" Background="#FFF09393"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="263" Margin="521,29,0,0" VerticalAlignment="Top" Width="144"/>
+
     </Grid>
-</Window>
+</Window> 
+ 
